@@ -1,12 +1,12 @@
-🔐 Custom Password Generator
+##🔐 Custom Password Generator
 A sleek, robust, and highly responsive web application engineered to generate cryptographically secure passwords with real-time strength analysis.
 Live Demo Link
 ________________________________________
-📝 Project Overview
+##📝 Project Overview
 This is a client-side utility designed with a strict focus on modern UI/UX principles and digital security. It provides users with complete control over their password complexity through an intuitive, interactive interface. Unlike basic random string generators, this application features a sophisticated, algorithm-driven strength meter that evaluates character diversity and length in real-time, providing immediate visual feedback.
 From quick 6-character PINs to uncrackable 24-character security keys, this tool ensures users generate robust credentials effortlessly, complete with a seamless one-click copy experience.
 ________________________________________
-✨ Key Features
+##✨ Key Features
 •	Granular Complexity Control: Toggle specific character sets including Uppercase, Lowercase, Numbers, and Symbols to meet strict password requirements.
 •	Dynamic Range Slider: Smooth, responsive length adjustment (from 6 to 24 characters) that updates the password generation engine instantly on user input.
 •	Real-Time Strength Analytics: A dynamic, color-coded strength bar (Weak, Medium, Strong) that calculates password entropy on the fly based on length and character combinations.
@@ -14,7 +14,7 @@ ________________________________________
 •	Zero-State Prevention: Auto-generates a secure password immediately upon page load so the user is never met with an empty field.
 •	Fluid Responsiveness: Perfectly scales down to 400px viewports, ensuring a seamless experience across desktop, tablet, and mobile devices.
 ________________________________________
-🧠 Technical Highlights (Skills Showcase)
+##🧠 Technical Highlights (Skills Showcase)
 This project was built from scratch without reliance on external UI frameworks, demonstrating a deep, applied understanding of modern web development:
 Advanced JavaScript Logic & DOM Manipulation
 •	Algorithmic Strength Calculation: Rather than relying on basic string length, the updateStrength function utilizes Regular Expressions (Regex) (e.g., /[A-Z]/, /[!@#$%...]/) to verify character diversity. It computes a weighted score (scaling up to 100) to dynamically adjust the DOM's CSS width and color variables for the strength meter.
@@ -28,14 +28,14 @@ Semantic HTML5 & Accessibility
 •	Accessible Structure: Implemented clear <label> associations for all inputs to ensure screen reader compatibility.
 •	Input Protection: Strategically utilized the readonly attribute on the primary password <input>, preventing accidental user keystrokes while keeping the generated string selectable for the Clipboard API.
 ________________________________________
-🛠️ Tech Stack
+##🛠️ Tech Stack
 •	HTML5: Semantic architecture and accessible forms.
 •	CSS3: Custom Variables, Flexbox, Pseudo-elements, and Media Queries.
 •	JavaScript (ES6+): Modular functions, DOM API, Regex, and Promises.
 •	FontAwesome (6.5.1): Scalable vector icons.
 •	Google Fonts: Montserrat typeface for a clean, modern aesthetic.
 ________________________________________
-🚀 Quick Start
+##🚀 Quick Start
 1.	Clone the repository:
 Bash
 git clone https://github.com/sk-reyad/password-generator.git
