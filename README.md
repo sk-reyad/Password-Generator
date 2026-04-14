@@ -1,6 +1,6 @@
 # 🔐 Custom Password Generator
 A sleek, robust, and highly responsive web application engineered to generate cryptographically secure passwords with real-time strength analysis.
-Live Demo Link
+* **Live Demo Link:** https://sk-reyad.github.io/Password-Generator/
 ________________________________________
 # 📝 Project Overview
 This is a client-side utility designed with a strict focus on modern UI/UX principles and digital security. It provides users with complete control over their password complexity through an intuitive, interactive interface. Unlike basic random string generators, this application features a sophisticated, algorithm-driven strength meter that evaluates character diversity and length in real-time, providing immediate visual feedback.
@@ -36,13 +36,13 @@ ________________________________________
 * **Google Fonts:** Montserrat typeface for a clean, modern aesthetic.
 ________________________________________
 # 🚀 Quick Start
-**1.	Clone the repository:**
+* **Clone the repository:**
 Bash
 git clone https://github.com/sk-reyad/password-generator.git
-**2.	Navigate to the project directory:**
+* **Navigate to the project directory:**
 Bash
 cd password-generator
-**3.	Run the application:**
+* **Run the application:**
 Simply open the index.html file in your preferred web browser. No local server or build tools required!
 ________________________________________
 # 📬 Let's Connect
