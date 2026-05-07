@@ -3,7 +3,9 @@
 A sleek, responsive, and interactive password generator built with **HTML**, **CSS**, and **JavaScript**. This project allows users to generate random passwords based on selected character types, customize password length, view password strength instantly, and copy the generated password with one click.
 
 **Live Demo:** [https://password-generator-two-lilac.vercel.app/](https://password-generator-two-lilac.vercel.app/)
+
 **Source Code:** [https://github.com/sk-reyad/Password-Generator](https://github.com/sk-reyad/Password-Generator)
+
 **Alternative Demo:** [https://sk-reyad.github.io/Password-Generator/](https://sk-reyad.github.io/Password-Generator/)
 
 ---
