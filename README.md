@@ -1,77 +1,246 @@
-# 🔐 Custom Password Generator
+# Custom Password Generator
 
-A sleek, robust, and highly responsive web application engineered to generate cryptographically secure passwords with real-time strength analysis.
+A sleek, responsive, and interactive password generator built with **HTML**, **CSS**, and **JavaScript**. This project allows users to generate random passwords based on selected character types, customize password length, view password strength instantly, and copy the generated password with one click.
 
-* **Live Demo Link:** https://sk-reyad.github.io/Password-Generator/
-
----
-
-# 📝 Project Overview
-
-This is a client-side utility designed with a strict focus on modern UI/UX principles and digital security. It provides users with complete control over their password complexity through an intuitive, interactive interface. Unlike basic random string generators, this application features a sophisticated, algorithm-driven strength meter that evaluates character diversity and length in real-time, providing immediate visual feedback. 
-
-From quick 6-character PINs to uncrackable 24-character security keys, this tool ensures users generate robust credentials effortlessly, complete with a seamless one-click copy experience.
+**Live Demo:** [https://password-generator-two-lilac.vercel.app/](https://password-generator-two-lilac.vercel.app/)
+**Source Code:** [https://github.com/sk-reyad/Password-Generator](https://github.com/sk-reyad/Password-Generator)
+**Alternative Demo:** [https://sk-reyad.github.io/Password-Generator/](https://sk-reyad.github.io/Password-Generator/)
 
 ---
 
-# ✨ Key Features
+## Overview
 
-* **Granular Complexity Control:** Toggle specific character sets including Uppercase, Lowercase, Numbers, and Symbols to meet strict password requirements.
-* **Dynamic Range Slider:** Smooth, responsive length adjustment (from 6 to 24 characters) that updates the password generation engine instantly on user input.
-* **Real-Time Strength Analytics:** A dynamic, color-coded strength bar (Weak, Medium, Strong) that calculates password entropy on the fly based on length and character combinations.
-* **Smart Clipboard Integration:** One-click copy functionality featuring custom UI feedback—the copy icon instantly morphs into a green success checkmark to confirm action completion.
-* **Zero-State Prevention:** Auto-generates a secure password immediately upon page load so the user is never met with an empty field.
-* **Fluid Responsiveness:** Perfectly scales down to 400px viewports, ensuring a seamless experience across desktop, tablet, and mobile devices.
+The **Custom Password Generator** is a client-side web application designed to make password creation simple, fast, and visually engaging. Users can control password complexity by selecting character types such as uppercase letters, lowercase letters, numbers, and symbols. The application then generates a random password based on those selected options.
+
+The project focuses on both practical functionality and clean user experience. It includes a modern card-based interface, responsive layout, custom form controls, a real-time password strength indicator, and clipboard support for quick copying. This makes the project a strong frontend practice project that demonstrates DOM manipulation, event handling, JavaScript logic, responsive styling, and user-focused interface design.
 
 ---
 
-# 🧠 Technical Highlights (Skills Showcase)
+## Features
 
-This project was built from scratch without reliance on external UI frameworks, demonstrating a deep, applied understanding of modern web development:
+* Generate random passwords instantly in the browser
+* Select password length from **6 to 24 characters**
+* Include or exclude:
 
-### Advanced JavaScript Logic & DOM Manipulation
-* **Algorithmic Strength Calculation:** Rather than relying on basic string length, the `updateStrength` function utilizes Regular Expressions (Regex) (e.g., `/[A-Z]/`, `/[!@#$%...]/`) to verify character diversity. It computes a weighted score (scaling up to 100) to dynamically adjust the DOM's CSS width and color variables for the strength meter.
-* **Asynchronous Clipboard API:** Implemented modern browser APIs (`navigator.clipboard.writeText`) using a Promise chain (`.then().catch()`). Coupled with `setTimeout`, it orchestrates a smooth, temporary UI state change for user feedback by dynamically toggling FontAwesome classes (`fa-copy` to `fa-check`).
-* **Event-Driven Architecture:** Leverages precise event listeners (`input` for continuous slider updates, `click` for generation/copying, and `DOMContentLoaded` for initialization) to maintain a highly reactive interface.
+  * Uppercase letters
+  * Lowercase letters
+  * Numbers
+  * Symbols
+* Live password length display while using the range slider
+* Real-time password strength analysis
+* Password strength shown as:
 
-### Modern CSS3 Architecture & Styling
-* **Custom Properties (Variables):** Utilized `:root` variables to establish a centralized design system. This allows for semantic color management (`--primary-color`, `--strong-color`) and makes future theme adaptations effortless.
-* **Flexbox Mastery:** Extensively applied Flexbox properties (`justify-content: space-between`, `gap`, `flex-shrink`) to construct a resilient layout that prevents text overflow and maintains perfect alignment across the options panel and control bar.
-* **Custom Input Styling:** Completely overhauled native browser inputs. I stripped default styles from `input[type="checkbox"]` using `appearance: none` and rebuilt them with custom borders, transitions, and `::after` pseudo-elements to render a bespoke checkmark.
-
-### Semantic HTML5 & Accessibility
-* **Accessible Structure:** Implemented clear `<label>` associations for all inputs to ensure screen reader compatibility and improve click targets.
-* **Input Protection:** Strategically utilized the `readonly` attribute on the primary password `<input>`, preventing accidental user keystrokes while keeping the generated string selectable for the Clipboard API.
+  * Weak
+  * Medium
+  * Strong
+* Color-coded strength bar for better visual feedback
+* One-click copy-to-clipboard feature
+* Copy icon changes into a success checkmark after copying
+* Automatically generates a password when the page loads
+* Shows an alert if no character type is selected
+* Responsive design for desktop, tablet, and mobile screens
+* Modern gradient background with a clean white generator card
+* Custom checkbox styling for a polished interface
+* Uses Font Awesome icons for a better visual experience
 
 ---
 
-# 🛠️ Tech Stack
+## Technologies Used
 
-* **HTML5:** Semantic architecture and accessible forms.
-* **CSS3:** Custom Variables, Flexbox, Pseudo-elements, and Media Queries.
-* **JavaScript (ES6+):** Modular functions, DOM API, Regex, and Promises.
-* **FontAwesome (6.5.1):** Scalable vector icons.
-* **Google Fonts:** Montserrat typeface for a clean, modern aesthetic.
+* **HTML5** — for the main structure, input fields, labels, and layout
+* **CSS3** — for styling, responsive design, custom variables, Flexbox, gradients, transitions, and custom checkboxes
+* **JavaScript** — for password generation, DOM updates, event handling, strength checking, and clipboard functionality
+* **Font Awesome 6.5.1** — for the copy, check, and key icons
+* **Google Fonts** — for the Montserrat font used in the interface
 
 ---
 
-# 🚀 Quick Start
+## What I Learned
 
-* **Clone the repository:**
-```bash
-git clone https://github.com/sk-reyad/password-generator.git
+Through this project, I practiced building a fully interactive frontend application using only HTML, CSS, and JavaScript.
+
+I learned how to connect user input controls with JavaScript logic. The password length slider updates the selected length immediately, which helped me understand how real-time UI updates work using event listeners.
+
+I also practiced conditional logic by checking which character options the user selected. Based on those selections, the JavaScript creates a combined character pool and generates a password by randomly selecting characters from that pool.
+
+Another important part of this project was the password strength system. I used password length and character variety to calculate strength and update the UI dynamically. This helped me understand how logic and visual feedback can work together to improve user experience.
+
+I also worked with the Clipboard API to copy the generated password directly from the browser. The temporary icon change after copying helped me practice giving users clear interaction feedback.
+
+On the CSS side, I improved my understanding of responsive layouts, Flexbox, CSS variables, custom input styling, gradients, shadows, transitions, and media queries. Overall, this project helped me strengthen both JavaScript functionality and frontend presentation skills.
+
+---
+
+## Project Structure
+
+```text
+Password-Generator/
+│
+├── assets/
+│   └── logo.svg
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
 ```
 
-* **Navigate to the project directory:**
-```bash
-cd password-generator
-```
+### `index.html`
 
-* **Run the application:**
-Simply open the `index.html` file in your preferred web browser. No local server or build tools required!
+This file contains the main structure of the password generator. It includes the password display field, copy button, length slider, checkbox options, generate button, and password strength section.
+
+### `style.css`
+
+This file handles the complete visual design of the project. It includes the gradient background, generator card, custom checkboxes, buttons, password field, strength bar, responsive layout, and mobile-friendly adjustments.
+
+### `script.js`
+
+This file contains the main functionality of the application. It manages password generation, selected character options, slider updates, strength checking, copy-to-clipboard behavior, and automatic password generation on page load.
+
+### `assets/logo.svg`
+
+This file stores the project logo or favicon used in the browser tab.
 
 ---
 
-# 📬 Let's Connect
-* 📧 **Email:** skreyad2016@gmail.com
-* 💼 **LinkedIn:** [https://www.linkedin.com/in/sk-reyad/](https://www.linkedin.com/in/sk-reyad/)
+## How It Works
+
+When the website loads, the JavaScript file automatically generates an initial password so the user immediately sees a result.
+
+The user can then adjust the password length using the range slider. The selected length updates live beside the slider. The user can also select which character types should be included in the password.
+
+When the **Generate Password** button is clicked, the script checks the selected options. If no option is selected, it shows an alert asking the user to select at least one character type. If one or more options are selected, the script combines the selected character groups into one character pool.
+
+After that, JavaScript creates the password by repeatedly selecting random characters from the combined pool until the password reaches the selected length. The generated password is then displayed inside the readonly password field.
+
+The password strength checker analyzes the generated password based on length and character variety. It updates the strength label and adjusts the strength bar to show whether the password is weak, medium, or strong.
+
+The copy button uses the browser Clipboard API to copy the generated password. After copying, the icon temporarily changes into a checkmark to confirm the action.
+
+---
+
+## Password Strength Logic
+
+The strength meter is based on a simple scoring approach. The password becomes stronger when it has a longer length and contains a wider variety of character types.
+
+The strength checker considers:
+
+* Password length
+* Uppercase letters
+* Lowercase letters
+* Numbers
+* Symbols
+
+The final result is shown visually:
+
+```text
+Weak   → Red strength bar
+Medium → Yellow strength bar
+Strong → Green strength bar
+```
+
+This gives users quick and clear feedback about the quality of the generated password.
+
+---
+
+## UI/UX Highlights
+
+The design is focused on clarity, simplicity, and smooth interaction.
+
+Key design details include:
+
+* Clean centered layout
+* Modern gradient background
+* White card-style password generator box
+* Rounded corners and soft shadow
+* Readonly password field to prevent accidental editing
+* Circular copy button with icon feedback
+* Custom-designed checkboxes
+* Smooth hover effect on the generate button
+* Responsive layout for smaller devices
+* Clear visual password strength indicator
+
+---
+
+## Setup and Usage
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/sk-reyad/Password-Generator.git
+```
+
+### 2. Navigate to the Project Folder
+
+```bash
+cd Password-Generator
+```
+
+### 3. Open the Project
+
+Open the `index.html` file in any modern web browser.
+
+No installation, package manager, build tool, or local server is required.
+
+---
+
+## Deployment
+
+This project can be deployed easily using static hosting platforms because it only uses HTML, CSS, and JavaScript.
+
+Current deployment links:
+
+* **Vercel Live Demo:** [https://password-generator-two-lilac.vercel.app/](https://password-generator-two-lilac.vercel.app/)
+* **GitHub Pages Demo:** [https://sk-reyad.github.io/Password-Generator/](https://sk-reyad.github.io/Password-Generator/)
+* **GitHub Repository:** [https://github.com/sk-reyad/Password-Generator](https://github.com/sk-reyad/Password-Generator)
+
+---
+
+## Browser Support
+
+This project works best in modern browsers such as:
+
+* Google Chrome
+* Microsoft Edge
+* Mozilla Firefox
+* Safari
+
+The copy feature depends on the browser’s Clipboard API, so it works best in browsers that support `navigator.clipboard`.
+
+---
+
+## Security Note
+
+This project is a frontend learning project and uses JavaScript-based random password generation. It is suitable for demonstrating password generation logic, UI interaction, DOM manipulation, and frontend development skills.
+
+For a more security-focused production version, the password generation logic could be improved by using the Web Crypto API, such as `crypto.getRandomValues()`, for stronger randomness.
+
+---
+
+## Future Improvements
+
+Possible future improvements include:
+
+* Use `crypto.getRandomValues()` for stronger random password generation
+* Ensure at least one character from each selected character type appears in the generated password
+* Add a password visibility toggle
+* Add an option to exclude similar-looking characters such as `O`, `0`, `l`, and `1`
+* Add a password history section for recently generated passwords
+* Add dark mode support
+* Add a copy success toast message
+* Add more detailed password strength feedback
+* Add an option to generate memorable passphrases
+* Improve accessibility with more ARIA labels and keyboard focus states
+
+---
+
+## Author
+
+**SK Reyad Ali**
+
+---
+
+## Contact
+
+* Email: [skreyad2016@gmail.com](mailto:skreyad2016@gmail.com)
+* LinkedIn: [https://www.linkedin.com/in/sk-reyad/](https://www.linkedin.com/in/sk-reyad/)
